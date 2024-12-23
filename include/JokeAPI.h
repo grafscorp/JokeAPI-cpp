@@ -1,8 +1,12 @@
 #pragma once
+#define CURL_STATICLIB
+
 #include <string>
 #include "curl/curl.h"
 #include "joke_data.h"
 #include <iostream>
+
+
 class JokeAPI
 {
 public:
