@@ -15,16 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="scr\joke_client_api.cpp">
+    <ClCompile Include="scr\JokeClientApi.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="scr\JokeProperties.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="scr\JokeDataParser.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="scr\JokeAPI.cpp">
@@ -35,7 +32,7 @@
     <ClInclude Include="include\joke_category.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="include\joke_client_api.h">
+    <ClInclude Include="include\JokeClientApi.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="include\joke_data.h">
