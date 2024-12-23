@@ -12,15 +12,12 @@ Use the popular [API](https://jokeapi.dev/) to get various jokes for free, witho
 
 int main()
 {
-    curl_global_init(CURL_GLOBAL_DEFAULT);
-    
     JokeClient jClient;
     jClient.setJokeLang("en");
     jClient.setJokeCategory(JokeCategory::Any);
     jClient.setJokeType(JokeType::single);
     std::cout << jClient.getJokeData().getJoke();
 
-    curl_global_cleanup();
     return 0;
 }
 ```
