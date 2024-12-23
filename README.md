@@ -26,7 +26,11 @@ int main()
 ```
 
 ## Build:
-
+### For Visual Studio
+Свойства проекта->
+- Для всех конфигураций
+- - Общее -> Тип конфигурации -> Статическая библиотека(.lib)
+- - Библиотекарь -> Общее -> Допольнительные зависимости = Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;advapi32.lib;${Workspace}\lib\libcurl_a_debug.lib(Для Debug);${Workspace}\lib\libcurl_a.lib (Для Release)
 > [!NOTE]
 > In development
 
