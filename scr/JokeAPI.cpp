@@ -1,4 +1,4 @@
-#include "../include/JokeAPI.h"
+#include "JokeAPI.h"
 
 
 std::string JokeAPI::getJokeRes(JokeResType resType = JokeResType::json,std::string url_params = "")
@@ -24,10 +24,6 @@ std::string JokeAPI::getJokeRes(JokeResType resType = JokeResType::json,std::str
     }
 
     std::string req_url = URL_JOKE_API + url_params + formatParam;
-
-#ifdef _DEBUG
-    std::cout << req_url << std::endl;
-#endif // _DEBUG
 
     try
     {

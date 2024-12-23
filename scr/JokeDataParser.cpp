@@ -1,4 +1,4 @@
-#include "../include/JokeDataParser.h"
+#include "JokeDataParser.h"
 #ifdef _DEBUG
 #include <iostream>
 #endif // _DEBUG

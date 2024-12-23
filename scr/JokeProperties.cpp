@@ -1,4 +1,4 @@
-#include "../include/JokeProperties.h"
+#include "JokeProperties.h"
 
 JokeProperties::JokeProperties()
 {
