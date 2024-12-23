@@ -1,4 +1,4 @@
-#include "../include/joke_client_api.h"
+#include "JokeClientApi.h"
 
 JokeClient::JokeClient()
 {
