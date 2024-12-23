@@ -40,14 +40,14 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -106,13 +106,19 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\Programming\CPPLibs\curl-8.11.1\builds\x64 Debug\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\CppProjects\JokeAPIVS\JokeAPI\JokeAPI\include;D:\Programming\CPPLibs\curl-8.11.1\builds\x64 Debug\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;advapi32.lib;D:\Programming\CPPLibs\curl-8.11.1\builds\x64 Debug\lib\libcurl_a_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <Lib>
+      <AdditionalDependencies>Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;advapi32.lib;D:\Programming\CPPLibs\curl-8.11.1\builds\x64 Debug\lib\libcurl_a_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>E:\CppProjects\JokeAPIVS\JokeAPI\JokeAPI\include\curl;E:\CppProjects\JokeAPIVS\JokeAPI\JokeAPI\include;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -122,7 +128,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\Programming\CPPLibs\curl-8.11.1\builds\x64 Release\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\CppProjects\JokeAPIVS\JokeAPI\JokeAPI\include;D:\Programming\CPPLibs\curl-8.11.1\builds\x64 Release\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -131,20 +137,25 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;advapi32.lib;D:\Programming\CPPLibs\curl-8.11.1\builds\x64 Release\lib\libcurl_a.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <Lib>
+      <AdditionalDependencies>Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;advapi32.lib;D:\Programming\CPPLibs\curl-8.11.1\builds\x64 Release\lib\libcurl_a.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>E:\CppProjects\JokeAPIVS\JokeAPI\JokeAPI\include;</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="scr\JokeAPI.cpp" />
     <ClCompile Include="scr\JokeDataParser.cpp" />
     <ClCompile Include="scr\JokeProperties.cpp" />
-    <ClCompile Include="scr\joke_client_api.cpp" />
+    <ClCompile Include="scr\JokeClientApi.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\JokeAPI.h" />
     <ClInclude Include="include\JokeDataParser.h" />
     <ClInclude Include="include\JokeProperties.h" />
     <ClInclude Include="include\joke_category.h" />
-    <ClInclude Include="include\joke_client_api.h" />
+    <ClInclude Include="include\JokeClientApi.h" />
     <ClInclude Include="include\joke_data.h" />
     <ClInclude Include="include\joke_flags.h" />
     <ClInclude Include="include\joke_type.h" />
