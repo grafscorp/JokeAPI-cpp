@@ -7,13 +7,13 @@
 struct JokeData
 {
 public:
-    JokeData(int id, bool safe, char lang[2], std::string category,unsigned int type , const JokeFlags flags, const std::string _joke[2])
-        : id(id), safe(safe),type(type), category(category), flags(flags)
+    JokeData(int id, bool safe, char lang[2], std::string category, unsigned int type, const JokeFlags flags, const std::string _joke[2])
+        : id(id), safe(safe), type(type), category(category), flags(flags)
     {
         joke[0] = _joke[0]; joke[1] = _joke[1];
         this->lang[0] = lang[0]; this->lang[1] = lang[1];
     }
-    JokeData(int id,  char lang[2], std::string category, unsigned int type, const JokeFlags flags, const std::string _joke[2])
+    JokeData(int id, char lang[2], std::string category, unsigned int type, const JokeFlags flags, const std::string _joke[2])
         : id(id), type(type), category(category), flags(flags)
     {
         joke[0] = _joke[0]; joke[1] = _joke[1];
@@ -46,10 +46,11 @@ public:
         alldata.append(", category : ");
         alldata.append(category);
         alldata.append(", joke : ");
-        alldata.append(type==JokeType::single?joke[0]:joke[0]+joke[1]);
+        alldata.append(type == JokeType::single ? joke[0] : joke[0] + joke[1]);
         //!*TODO add flags
 
         return alldata;
     }
+
 
 };
