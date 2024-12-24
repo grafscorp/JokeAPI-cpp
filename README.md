@@ -8,7 +8,7 @@ Use the popular [API](https://jokeapi.dev/) to get various jokes for free, witho
 ## Usage:
 ```Cpp
 #include <iostream>
-#include "jokeСlientАpi.h"
+#include <jokeСlientАpi.h>
 
 int main()
 {
