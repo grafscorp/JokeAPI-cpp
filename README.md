@@ -16,7 +16,8 @@ int main()
     jClient.setJokeLang("en");
     jClient.setJokeCategory(JokeCategory::Any);
     jClient.setJokeType(JokeType::single);
-    std::cout << jClient.getJokeData().getJoke();
+    JokeData jData = jClient.getJokeData();
+    std::cout << jData.getJoke();
 
     return 0;
 }
