@@ -12,7 +12,8 @@ JokeClient::~JokeClient()
 
 JokeData JokeClient::getJokeData()
 {
-    return parseJokeRes(getJokeRes(JokeResType::json, getParams() ));
+    JokeAPI jApi;
+    return parseJokeRes(jApi.getJokeRes( getParams(), JOKE_RES_TYPE_JSON ));
 }
 
 

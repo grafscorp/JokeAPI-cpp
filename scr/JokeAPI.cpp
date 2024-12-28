@@ -1,22 +1,24 @@
 #include "JokeAPI.h"
 
 
-std::string JokeAPI::getJokeRes(JokeResType resType = JokeResType::json,std::string url_params = "")
+
+
+std::string JokeAPI::getJokeRes(std::string url_params = "", unsigned int jokeResType = JOKE_RES_TYPE_JSON)
 {
     auto handle = curl_easy_init();
     std::string result;
     CURLcode resConn;
 
     std::string formatParam = "&format=";
-    switch (resType)
+    switch (jokeResType)
     {
-    case JokeAPI::json:
+    case JOKE_RES_TYPE_JSON:
         formatParam += "json";
         break;
-    case JokeAPI::xml:
+    case JOKE_RES_TYPE_XML:
         formatParam += "xml";
         break;
-    case JokeAPI::text:
+    case JOKE_RES_TYPE_TEXT:
         formatParam += "text";
         break;
     default:
