@@ -17,7 +17,7 @@ void JokeProperties::setJokeCategory(JokeCategory newCategory)
 
 
 
-void JokeProperties::setJokeType(JokeType newType)
+void JokeProperties::setJokeType(unsigned int newType)
 {
 	j_type = newType;
 }
@@ -48,7 +48,7 @@ std::string JokeProperties::getLangParam()
 std::string JokeProperties::getTypeParam()
 {
 	std::string typeParam = "type=";
-	typeParam += j_type == JokeType::single ? "single" : "twopart";
+	typeParam += j_type == JOKE_TYPE_SINGLE ? "single" : "twopart";
 	return typeParam;
 }
 

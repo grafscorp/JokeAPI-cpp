@@ -10,7 +10,7 @@
 
 
 
-class JokeClient : public JokeDataParser, public JokeAPI, public JokeProperties {
+class JokeClient : public JokeDataParser, public JokeProperties {
 public:
     JokeClient();
     ~JokeClient();

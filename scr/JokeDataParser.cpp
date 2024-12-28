@@ -1,8 +1,5 @@
-#include "JokeDataParser.h"
-#ifdef _DEBUG
-#include <iostream>
-#endif // _DEBUG
 
+#include "JokeDataParser.h"
 
 JokeData JokeDataParser::parseJokeRes(std::string resJoke)
 {
@@ -28,10 +25,10 @@ JokeData JokeDataParser::parseJokeRes(std::string resJoke)
 
 
 
-	unsigned int type = resJson["type"].get<std::string>() == "single" ? JokeType::single : JokeType::twoparts;
+	unsigned int type = resJson["type"].get<std::string>() == "single" ? JOKE_TYPE_SINGLE : JOKE_TYPE_TWOPARTS;
 	//bool  safe =  resJson["safe"].get<nlohmann::json::boolean_t>();
 	std::string joke[2];
-	if (type == JokeType::single)
+	if (type == JOKE_TYPE_SINGLE)
 	{
 		joke[0] = resJson["joke"];
 		joke[1] = "null";

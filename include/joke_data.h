@@ -3,6 +3,10 @@
 #include "joke_category.h"
 #include "joke_flags.h"
 #include "joke_type.h"
+
+#define JOKE_TYPE_SINGLE 0
+#define JOKE_TYPE_TWOPARTS 1
+
 //JokeData. id,safe,lang[2], category,type,flags,joke
 struct JokeData
 {
@@ -29,7 +33,7 @@ public:
     std::string joke[2];
 
     std::string getJoke() {
-        return type == JokeType::single ? joke[0] : joke[0] + joke[1];
+        return type == JOKE_TYPE_SINGLE ? joke[0] : joke[0] + joke[1];
     }
 
 
@@ -46,7 +50,7 @@ public:
         alldata.append(", category : ");
         alldata.append(category);
         alldata.append(", joke : ");
-        alldata.append(type == JokeType::single ? joke[0] : joke[0] + joke[1]);
+        alldata.append(type == JOKE_TYPE_SINGLE ? joke[0] : joke[0] + joke[1]);
         //!*TODO add flags
 
         return alldata;

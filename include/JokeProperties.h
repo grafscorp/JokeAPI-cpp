@@ -9,7 +9,7 @@ public:
 	~JokeProperties();
     //Any, Mics, Programming, Dark, Pun, Spooky, Chrostmas
     void setJokeCategory(JokeCategory);
-    void setJokeType(JokeType);
+    void setJokeType(unsigned int);
     void setJokeLang(const char[3]);
     void setJokeBlacklistFlags(std::string);
     void setJokeBlacklistFlags(std::vector<std::string>);
@@ -20,7 +20,7 @@ protected:
 	std::string j_lang = "en";
     std::string j_category = "Any";
     std::vector<std::string> j_blackflags;
-    JokeType j_type = JokeType::single;
+    unsigned int j_type = JOKE_TYPE_SINGLE;
 
 
 };
